@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "soulbound",
+  "version": "${version}",
+  "name": "soulbound",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/thematicarmor/soulbound"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/soulbound/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "bond.thematic.soulbound.Soulbound"
+    ]
+  },
+  "mixins": [
+    "soulbound.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
