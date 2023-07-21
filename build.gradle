@@ -23,7 +23,7 @@ dependencies {
         // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    include(modImplementation files("libs/thematic-1.2.40-ALPHA.jar"))
+    include(modImplementation files("libs/thematic-1.2.42-BETA.jar"))
     }
 
 processResources {
