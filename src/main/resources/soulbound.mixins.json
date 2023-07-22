@@ -4,6 +4,7 @@
   "package": "bond.thematic.soulbound.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "PlayerEntityMixin",
     "PlayerInventoryMixin"
   ],
   "client": [

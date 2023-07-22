@@ -31,7 +31,6 @@ public class PlayerInventoryMixin {
 
     @Inject(method = "dropAll", at = @At("HEAD"), cancellable = true)
     public void dropAll(CallbackInfo ci) {
-
         Iterator<DefaultedList<ItemStack>> var1 = this.combinedInventory.iterator();
 
         while (var1.hasNext()) {
@@ -40,7 +39,9 @@ public class PlayerInventoryMixin {
             for (int i = 0; i < list.size(); ++i) {
                 ItemStack itemStack = list.get(i);
                 if (!itemStack.isEmpty()) {
-                    if (itemStack.getItem() instanceof ThematicArmor && player.getEquippedStack(EquipmentSlot.CHEST) == itemStack) continue;
+                    if (itemStack.getItem() instanceof ThematicArmor && player.getEquippedStack(EquipmentSlot.CHEST) == itemStack) {
+                        continue;
+                    }
                     this.player.dropItem(itemStack, true, false);
                     list.set(i, ItemStack.EMPTY);
                 }

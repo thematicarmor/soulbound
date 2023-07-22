@@ -6,6 +6,5 @@ public class Soulbound implements DedicatedServerModInitializer {
 
     @Override
     public void onInitializeServer() {
-
     }
 }
